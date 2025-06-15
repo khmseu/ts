@@ -1,8 +1,9 @@
-// src/railroad/core/Download.ts
+import { Response } from 'express';
 
 export class Download {
-    static downloadFile(filename: string, data: Buffer | string, contentType: string): void {
-        // In Node.js, this would be handled by Express response
-        // This is a placeholder for download logic
+    static downloadFile(res: Response, filename: string, data: Buffer | string, contentType: string): void {
+        res.setHeader("Content-Type", contentType);
+        res.setHeader("Content-Disposition", `attachment; filename="${filename}"`);
+        res.send(data);
     }
 }

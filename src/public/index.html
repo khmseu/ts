@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Railroad Diagram Generator</title>
+</head>
+<body>
+  <h1>Railroad Diagram Generator</h1>
+  <form action="/railroad" method="post">
+    <label for="grammar">EBNF Grammar:</label><br>
+    <textarea id="grammar" name="grammar" rows="8" cols="60"></textarea><br>
+    <button type="submit">Generate Diagram</button>
+  </form>
+  <h2>Or use the API:</h2>
+  <pre>GET /railroad?grammar=...</pre>
+</body>
+</html>
